@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Animated Rainbow Background */
+body {
+  height: 100vh;
+  background: linear-gradient(
+    270deg,
+    #ff0000,
+    #ff7f00,
+    #ffff00,
+    #00ff00,
+    #0000ff,
+    #4b0082,
+    #8f00ff
+  );
+  background-size: 1400% 1400%;
+  animation: rainbow 21s ease-in-out infinite;
+}
+
+/* Slow smooth animation */
+@keyframes rainbow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Dark overlay for readability */
+.overlay {
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Content */
+header h1 {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  color: #ddd;
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.buttons a {
+  text-decoration: none;
+  color: #fff;
+  padding: 12px 28px;
+  margin: 0 8px;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.buttons a:hover {
+  background: #fff;
+  color: #000;
+}
+
+.tooltip {
+  position: relative;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.tooltip-text {
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.tooltip:hover .tooltip-text,
+.tooltip:focus .tooltip-text {
+  opacity: 1;
+}
+
+
+
+.logo {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+  </style>
+  
+  
+<title>Entertainment Website</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="overlay">
+  <header>
+    <h1><img src="FinalRRLogo3.png" alt="reelsandrides Logo" class="logo"></h1>
+    <p>FEEL IT. REEL IT</p>
+    <div class="buttons">
+      <a href="https://www.instagram.com/reelsndrides/?hl=en" target="_blank">Explore </a>
+      <a href="#" class="tooltip">Contact
+        <span class="tooltip-text"> +91 86888 13870 </span>
+
+      </a>
+    </div>
+  </header>
+</div>
+
+</body>
+</html>
